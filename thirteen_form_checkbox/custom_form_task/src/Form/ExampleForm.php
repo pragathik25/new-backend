@@ -4,7 +4,7 @@ namespace Drupal\custom_form_task\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Psr\Log\LoggerInterface;
+use Drupal\Core\Logger\LoggerChannelInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -15,17 +15,17 @@ class ExampleForm extends FormBase {
   /**
    * The logger service.
    *
-   * @var \Psr\Log\LoggerInterface
+   * @var \Drupal\Core\Logger\LoggerChannelInterface
    */
   protected $logger;
 
   /**
-   * Constructs a ExampleForm object.
+   * Constructs an ExampleForm object.
    *
-   * @param \Psr\Log\LoggerInterface $logger
+   * @param \Drupal\Core\Logger\LoggerChannelInterface $logger
    *   The logger service.
    */
-  public function __construct(LoggerInterface $logger) {
+  public function __construct(LoggerChannelInterface $logger) {
     $this->logger = $logger;
   }
 
