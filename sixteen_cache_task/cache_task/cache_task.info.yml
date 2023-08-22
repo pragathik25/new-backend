@@ -1,0 +1,5 @@
+name: 'cache_task'
+type: module
+description: 'cache task description'
+package: Custom
+core_version_requirement: ^10
